@@ -12,7 +12,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  scroll-behavior: smooth;
 }
+/* TOPBAR */
 .topbar {
   width: 100%;
   display: flex;
@@ -42,6 +45,8 @@
   width: 40px;
   border-radius: 50%;
 }
+/* TOPBAR END */
+
 h1 {
   font-size: 60px;
   margin-bottom: -30px;
@@ -49,12 +54,12 @@ h1 {
 h2 span {
   color: orangered;
 }
-.search {
+
+/* SEARCH */
+#search {
   width: 100%;
   margin-top: 20px;
-  /* position: sticky;
-  top: 10px;
-  z-index: 999; */
+  scroll-behavior: smooth;
 }
 .search-ing {
   width: 100%;
@@ -90,11 +95,10 @@ h2 span {
   border: none;
   outline: none;
 }
+/* SEARCH END */
 
-.categories {
-  position: sticky;
-  top: 0px;
-  z-index: 999;
+/* CATEGORIES */
+#categories {
   width: 100%;
   margin-top: 20px;
   display: flex;
@@ -103,6 +107,7 @@ h2 span {
   border-bottom: 1px solid #b1b1b1;
   background: #fff;
   padding: 3%;
+  scroll-behavior: smooth;
 }
 
 .menu {
@@ -132,6 +137,7 @@ h2 span {
 .menu:hover {
   background: none;
 }
+/* CATEGORIES END */
 
 /* Card */
 .card-inti {
@@ -143,19 +149,15 @@ h2 span {
 }
 .card {
   margin: auto;
-  /* width: 150px;
-  height: 250px;
-  margin-right: 6px;
-  margin-left: 6px; */
   width: 300px;
   height: 350px;
   margin-right: 20px;
   margin-left: 20px;
-  background: #eaeaea;
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
   margin-top: 30px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -1px -1px 20px rgba(0, 0, 0, 0.2);
   transition: all 1s;
 }
 .header img {
@@ -190,7 +192,6 @@ h2 span {
   }
 }
 
-/* fgjsfjks */
 .card:hover {
   transform: scale(1.1);
 }
@@ -212,11 +213,13 @@ h2 span {
   border-radius: 50%;
   color: #fff;
   padding: 1%;
+  cursor: pointer;
 }
 .fa-solid {
   margin-left: 5px;
   margin-top: 2px;
 }
+/*CARD END */
 
 /* PROGRESS */
 h2 {
@@ -225,26 +228,27 @@ h2 {
 .wadah-progres {
   width: 100%;
   height: 350px;
-  background: #eaeaea;
+  background: #fff;
   display: flex;
   padding-right: 10%;
   padding-left: 10%;
   justify-content: center;
   flex-direction: column;
   margin-top: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -1px -1px 20px rgba(0, 0, 0, 0.2);
 }
 
 .html {
   width: 100%;
   height: 5px;
   border-radius: 5px;
-  background: #b1b1b1;
+  background: #eaeaea;
   margin-bottom: 20px;
   border: none;
   outline: none;
 }
 .progres-html {
-  width: 80%;
+  width: 90%;
   height: 5px;
   background: red;
   border-radius: 5px;
@@ -256,19 +260,19 @@ h2 {
   border-radius: 5px;
 }
 .progres-java {
-  width: 40%;
+  width: 10%;
   height: 5px;
   background: blue;
   border-radius: 5px;
 }
 .progres-react {
-  width: 60%;
+  width: 15%;
   height: 5px;
   background: yellowgreen;
   border-radius: 5px;
 }
 .progres-boostrap {
-  width: 90%;
+  width: 5%;
   height: 5px;
   background: purple;
   border-radius: 5px;
@@ -276,6 +280,8 @@ h2 {
 .nilai {
   float: right;
 }
+/* PROGRESS END */
+
 /* CONTACT */
 #account {
   width: 100%;
@@ -287,6 +293,8 @@ h2 {
   margin: 40px auto;
   background: #fff;
   border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -1px -1px 20px rgba(0, 0, 0, 0.2);
+  scroll-behavior: smooth;
 }
 #account h2 {
   text-align: center;
@@ -323,7 +331,9 @@ h2 {
   color: #fff;
   opacity: 0.9;
 }
+/* CONTACT END */
 
+/* FOOTER */
 .footer {
   margin-top: 40px;
   width: 100%;
@@ -352,14 +362,6 @@ h2 {
   text-decoration: none;
 }
 
-/* footer */
-.footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background: #333;
-  color: #efefef;
-}
 .col-1,
 .col-2,
 .col-3 {
@@ -379,4 +381,32 @@ h3 {
   object-fit: cover;
   background-position: center;
   margin-left: 40px;
+}
+
+/* menu bar */
+.menu-bar {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  padding: 2%;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  bottom: 0px;
+  border-top: 1px solid #eaeaea;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.menu-bar-link img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .menu-bar {
+    padding: 3%;
+  }
 }
